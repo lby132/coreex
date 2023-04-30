@@ -1,6 +1,6 @@
 package hellola.coreex.order;
 
-import hellola.annotation.MainDiscountPolicy;
+import hellola.coreex.annotation.MainDiscountPolicy;
 import hellola.coreex.discount.DiscountPolicy;
 import hellola.coreex.member.Member;
 import hellola.coreex.member.MemberRepository;

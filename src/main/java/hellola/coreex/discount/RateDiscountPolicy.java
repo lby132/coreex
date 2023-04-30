@@ -1,10 +1,8 @@
 package hellola.coreex.discount;
 
-import hellola.annotation.MainDiscountPolicy;
+import hellola.coreex.annotation.MainDiscountPolicy;
 import hellola.coreex.member.Grade;
 import hellola.coreex.member.Member;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component

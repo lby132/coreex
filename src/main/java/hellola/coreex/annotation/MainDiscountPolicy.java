@@ -1,4 +1,4 @@
-package hellola.annotation;
+package hellola.coreex.annotation;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 
