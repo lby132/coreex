@@ -1,8 +1,13 @@
 package hellola.coreex.bendfind;
 
 import hellola.coreex.AppConfig;
+import hellola.coreex.discount.RateDiscountPolicy;
+import hellola.coreex.member.Grade;
 import hellola.coreex.member.MemberService;
 import hellola.coreex.member.MemberServiceImpl;
+import hellola.coreex.member.MemoryMemberRepository;
+import hellola.coreex.order.Order;
+import hellola.coreex.order.OrderServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -37,5 +42,12 @@ public class ApplicationContextBasicFindTest {
                 () -> ac.getBean("xxxx", MemberService.class));
     }
 
+    @Test
+    void asf() {
+        OrderServiceImpl orderService = new OrderServiceImpl(new MemoryMemberRepository(), new RateDiscountPolicy());
+        Order memberA = orderService.createOrder(1L, "memberA", 10000);
+        assertThat(memberA.getItemPrice()).isEqualTo(10000);
+
+    }
 
 }

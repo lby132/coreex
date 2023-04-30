@@ -1,5 +1,8 @@
 package hellola.coreex.member;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository;
